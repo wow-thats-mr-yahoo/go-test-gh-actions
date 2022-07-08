@@ -1,5 +1,7 @@
 package another
 
+import "fmt"
+
 type SomeVeryComplicatedFuncConfig struct {
 	A uint8
 	B uint8
@@ -18,5 +20,7 @@ const nothing = "nothing"
 
 // DoNothing does nothing
 func DoNothing() (string, error) {
-	return nothing, nil
+	res := fmt.Sprintf("%+#v", &SomeVeryComplicatedFuncConfig{})
+
+	return res, nil
 }
