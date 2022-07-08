@@ -74,3 +74,4 @@ jobs:
           prerelease: false
           draft: true
           #title: "???" # doesn't work
+          title: "My awesome release"
