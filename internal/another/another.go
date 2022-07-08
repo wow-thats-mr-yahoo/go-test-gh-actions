@@ -22,3 +22,6 @@ func DoNothing() (string, error) {
 
 	return res, nil
 }
+
+type AwesomeThing struct {
+}
