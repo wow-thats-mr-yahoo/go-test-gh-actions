@@ -11,3 +11,7 @@ import (
 func TestDoStuff(t *testing.T) {
 	require.Equal(t, 3422, lib.DoStuff())
 }
+
+func TestDoStuff_AnotherWay(t *testing.T) {
+	require.NotEqual(t, 3421, lib.DoStuff())
+}
