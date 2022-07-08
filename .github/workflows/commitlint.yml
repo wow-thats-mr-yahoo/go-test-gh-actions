@@ -8,5 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          # all history for all branches and tags
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v5
