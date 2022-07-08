@@ -9,5 +9,5 @@ import (
 )
 
 func TestDoStuff(t *testing.T) {
-	require.Equal(t, 3421, lib.DoStuff())
+	require.Equal(t, 3422, lib.DoStuff())
 }
