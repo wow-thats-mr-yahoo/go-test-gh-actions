@@ -7,6 +7,7 @@ type SomeVeryComplicatedFuncConfig struct {
 	D uint8
 }
 
+// SomeVeryComplicatedFunc does domething
 func SomeVeryComplicatedFunc(cfg SomeVeryComplicatedFuncConfig) int {
 	res := int(cfg.A) + int(cfg.B) + int(cfg.C) - int(cfg.D)
 
