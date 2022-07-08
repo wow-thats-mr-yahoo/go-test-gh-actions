@@ -40,20 +40,15 @@ jobs:
       #    #  ${{ steps.changelog.outputs.clean_changelog }}
       #    draft: false
       #    prerelease: false
-      - name: Create Release
-        uses: ncipollo/release-action@v1.10.0
-        with:
-          generateReleaseNotes: true
-          draft: false
-          prerelease: false
-          name: Release ${{ github.ref }}
-
-      #- uses: "marvinpinto/action-automatic-releases@v1.2.1"
+      #- name: Create Release
+      #  uses: ncipollo/release-action@v1.10.0
       #  with:
-      #    repo_token: "${{ secrets.GITHUB_TOKEN }}"
-      #    #automatic_release_tag: "latest"
+      #    generateReleaseNotes: true
+      #    draft: false
       #    prerelease: false
-      #    title: "Release ${{ github.ref }}"
-      #    #files: |
-      #    #  LICENSE.txt
-      #    #  *.jar
+      #    name: Release ${{ github.ref }}
+
+      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
