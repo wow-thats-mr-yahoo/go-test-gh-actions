@@ -16,8 +16,6 @@ func SomeVeryComplicatedFunc(cfg SomeVeryComplicatedFuncConfig) int {
 	return res
 }
 
-const nothing = "nothing"
-
 // DoNothing does nothing
 func DoNothing() (string, error) {
 	res := fmt.Sprintf("%+#v", &SomeVeryComplicatedFuncConfig{})
