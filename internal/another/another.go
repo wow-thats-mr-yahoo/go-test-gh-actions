@@ -12,3 +12,10 @@ func SomeVeryComplicatedFunc(cfg SomeVeryComplicatedFuncConfig) int {
 
 	return res
 }
+
+const nothing = "nothing"
+
+// DoNothing does nothing
+func DoNothing() (string, error) {
+	return nothing, nil
+}
