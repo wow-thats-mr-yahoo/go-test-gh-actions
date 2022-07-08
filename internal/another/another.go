@@ -20,5 +20,9 @@ func SomeVeryComplicatedFunc(cfg SomeVeryComplicatedFuncConfig) int {
 func DoNothing() (string, error) {
 	res := fmt.Sprintf("%+#v", &SomeVeryComplicatedFuncConfig{})
 
+	for i := range res {
+		fmt.Println(i, res[i])
+	}
+
 	return res, nil
 }
