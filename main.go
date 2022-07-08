@@ -14,7 +14,7 @@ func main() {
 
 	err = errors.Wrap(err, "something")
 
-	logrus.WithError(err).Info("something has gone sidewise")
+	logrus.WithError(err).Error("something has gone sidewise")
 
 	a := lib.DoStuff()
 
