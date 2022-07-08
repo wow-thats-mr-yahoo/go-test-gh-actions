@@ -13,9 +13,10 @@ func TestSomeVeryComplicatedFunc(t *testing.T) {
 		A: 12,
 		B: 43,
 		C: 42,
+		D: 32,
 	}
 
 	res := another.SomeVeryComplicatedFunc(cfg)
-
-	require.Equal(t, 12+43+42, res)
+	expected := 12 + 43 + 42 - 32
+	require.Equal(t, expected, res)
 }
