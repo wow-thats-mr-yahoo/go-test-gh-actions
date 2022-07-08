@@ -24,23 +24,30 @@ jobs:
       #    output-file: "false"
       #  #env:
         #  REPO: ${{ github.repository }}
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          #tag_name: ${{ steps.changelog.outputs.tag }}
-          #release_name: ${{ steps.changelog.outputs.tag }}
-          #body: ${{ steps.changelog.outputs.clean_changelog }}
+      #- name: Create Release
+      #  id: create_release
+      #  uses: actions/create-release@latest
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      #  with:
+      #    #tag_name: ${{ steps.changelog.outputs.tag }}
+      #    #release_name: ${{ steps.changelog.outputs.tag }}
+      #    #body: ${{ steps.changelog.outputs.clean_changelog }}
 
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          #body: |
-          #  ${{ steps.changelog.outputs.clean_changelog }}
+      #    tag_name: ${{ github.ref }}
+      #    release_name: Release ${{ github.ref }}
+      #    #body: |
+      #    #  ${{ steps.changelog.outputs.clean_changelog }}
+      #    draft: false
+      #    prerelease: false
+      - name: Create Release
+        uses: ncipollo/release-action@v1.10.0
+        with:
+          generateReleaseNotes: true
           draft: false
           prerelease: false
-          generateReleaseNotes: true
+          name: Release ${{ github.ref }}
+
       #- uses: "marvinpinto/action-automatic-releases@v1.2.1"
       #  with:
       #    repo_token: "${{ secrets.GITHUB_TOKEN }}"
