@@ -17,9 +17,8 @@ jobs:
     - name: Go Mod
       run: go mod download
 
-    # TODO: Add go format.
-    #- name: Go Format
-    #  run: gofmt -s -w . && git diff --exit-code
+    - name: Go Format
+      run: gofmt -s -w . && git diff --exit-code
 
     - name: Go Tidy
       run: go mod tidy && git diff --exit-code
@@ -31,6 +30,8 @@ jobs:
       with:
         version: "2022.1"
         install-go: false
+
+    # TODO: add go lint
 
     - name: Go Build
       run: go build -v ./...
