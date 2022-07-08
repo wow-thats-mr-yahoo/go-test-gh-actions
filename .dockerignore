@@ -1,0 +1,11 @@
+.git
+.gitignore
+LICENSE
+README.md
+*.diff
+*.patch
+*.log
+*.test
+*.out
+
+vendor
